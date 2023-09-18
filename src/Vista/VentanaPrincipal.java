@@ -6,6 +6,7 @@ package Vista;
 
 import tienda.VentanaItemsController;
 import tienda.VentanaPrincipalController;
+import tienda.VentanaTicketController;
 
 /**
  *
@@ -31,6 +32,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        btnticket = new javax.swing.JButton();
         btncomprar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -42,7 +44,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, -1, -1));
+
+        btnticket.setText("Ticket");
+        btnticket.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnticketActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnticket, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, -1, -1));
 
         btncomprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/shopbg.jpg"))); // NOI18N
         getContentPane().add(btncomprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 450));
@@ -58,6 +68,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnticketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnticketActionPerformed
+        // TODO add your handling code here:
+        VentanaPrincipalController.btnticket();
+//          VentanaTicketController.mostrarticket();
+          
+        
+    }//GEN-LAST:event_btnticketActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,6 +114,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel btncomprar;
+    private javax.swing.JButton btnticket;
     private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }

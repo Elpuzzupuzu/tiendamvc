@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import tienda.VentanaItemsController;
+import tienda.VentanaPrincipalController;
 
 /**
  *
@@ -35,6 +36,9 @@ public class VistaItems extends javax.swing.JFrame {
         btnhelado = new javax.swing.JButton();
         jlabelhelado = new javax.swing.JLabel();
         txttotal = new javax.swing.JTextField();
+        btnpastel = new javax.swing.JButton();
+        jlabelpastel = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         fondoitems = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,10 +57,36 @@ public class VistaItems extends javax.swing.JFrame {
         getContentPane().add(jlabelhelado, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, 80, 90));
 
         txttotal.setText("TOTAL");
+        txttotal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txttotalActionPerformed(evt);
+            }
+        });
         getContentPane().add(txttotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, -1, -1));
 
+        btnpastel.setBackground(new java.awt.Color(204, 204, 255));
+        btnpastel.setText("$270");
+        btnpastel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnpastelActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnpastel, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 100, 70, -1));
+
+        jlabelpastel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cake4.gif"))); // NOI18N
+        getContentPane().add(jlabelpastel, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 20, 90, 70));
+
+        jButton1.setBackground(new java.awt.Color(255, 102, 102));
+        jButton1.setText("Pagar :)");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, -1, -1));
+
         fondoitems.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondorosa.jpg"))); // NOI18N
-        getContentPane().add(fondoitems, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, -1));
+        getContentPane().add(fondoitems, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -67,6 +97,23 @@ public class VistaItems extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btnheladoActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        VentanaItemsController.ocultar();
+        VentanaPrincipalController.mostrar();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnpastelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpastelActionPerformed
+        // TODO add your handling code here:
+        
+        VentanaItemsController.btnpastel();
+    }//GEN-LAST:event_btnpastelActionPerformed
+
+    private void txttotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttotalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txttotalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,8 +194,11 @@ public class VistaItems extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnhelado;
+    private javax.swing.JButton btnpastel;
     private javax.swing.JLabel fondoitems;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jlabelhelado;
+    private javax.swing.JLabel jlabelpastel;
     private javax.swing.JTextField txttotal;
     // End of variables declaration//GEN-END:variables
 }

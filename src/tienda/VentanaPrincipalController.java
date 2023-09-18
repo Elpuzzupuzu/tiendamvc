@@ -15,7 +15,11 @@ public class VentanaPrincipalController {
     public static void btncomprar (){
         
     }
+    public static void btnticket(){
+    VentanaItemsController.carrito.mostrarproductos();
     
+    
+    }
     
     
     
