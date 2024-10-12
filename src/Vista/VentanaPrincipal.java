@@ -33,11 +33,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         btnticket = new javax.swing.JButton();
+        jLabelgato = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         btncomprar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 51));
         jButton1.setText("Comprar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -46,6 +49,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, -1, -1));
 
+        btnticket.setBackground(new java.awt.Color(255, 255, 51));
         btnticket.setText("Ticket");
         btnticket.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,7 +57,18 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnticket, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, -1, -1));
+        getContentPane().add(jLabelgato, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, -1, -1));
 
+        jButton2.setBackground(new java.awt.Color(51, 255, 51));
+        jButton2.setText("Salir");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, -1, -1));
+
+        btncomprar.setBackground(new java.awt.Color(204, 255, 102));
         btncomprar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/shopbg.jpg"))); // NOI18N
         getContentPane().add(btncomprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 450));
 
@@ -76,6 +91,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
           
         
     }//GEN-LAST:event_btnticketActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        VentanaPrincipalController.salir();
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -116,5 +137,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel btncomprar;
     private javax.swing.JButton btnticket;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabelgato;
     // End of variables declaration//GEN-END:variables
 }

@@ -39,6 +39,12 @@ public class VistaItems extends javax.swing.JFrame {
         btnpastel = new javax.swing.JButton();
         jlabelpastel = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        btnpan = new javax.swing.JButton();
+        jLabelpan = new javax.swing.JLabel();
+        btnleche = new javax.swing.JButton();
+        jLabelleche = new javax.swing.JLabel();
+        btnchocolate = new javax.swing.JButton();
+        jLabelchocolate = new javax.swing.JLabel();
         fondoitems = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -62,7 +68,7 @@ public class VistaItems extends javax.swing.JFrame {
                 txttotalActionPerformed(evt);
             }
         });
-        getContentPane().add(txttotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, -1, -1));
+        getContentPane().add(txttotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 370, -1, -1));
 
         btnpastel.setBackground(new java.awt.Color(204, 204, 255));
         btnpastel.setText("$270");
@@ -83,10 +89,46 @@ public class VistaItems extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 330, -1, -1));
+
+        btnpan.setBackground(new java.awt.Color(204, 204, 255));
+        btnpan.setText("$150");
+        btnpan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnpanActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, -1, -1));
+
+        jLabelpan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pan360 (1).gif"))); // NOI18N
+        getContentPane().add(jLabelpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, -1, -1));
+
+        btnleche.setBackground(new java.awt.Color(204, 204, 255));
+        btnleche.setText("$30");
+        btnleche.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnlecheActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnleche, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, -1, -1));
+
+        jLabelleche.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/leche2.gif"))); // NOI18N
+        getContentPane().add(jLabelleche, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, -1));
+
+        btnchocolate.setBackground(new java.awt.Color(255, 102, 102));
+        btnchocolate.setText("$8");
+        btnchocolate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnchocolateActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnchocolate, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, -1, -1));
+
+        jLabelchocolate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/chocolate.gif"))); // NOI18N
+        getContentPane().add(jLabelchocolate, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
 
         fondoitems.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondorosa.jpg"))); // NOI18N
-        getContentPane().add(fondoitems, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, -1));
+        getContentPane().add(fondoitems, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -114,6 +156,25 @@ public class VistaItems extends javax.swing.JFrame {
     private void txttotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttotalActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txttotalActionPerformed
+
+    private void btnpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpanActionPerformed
+        // TODO add your handling code here:
+        VentanaItemsController.btnpan();
+        
+        
+    }//GEN-LAST:event_btnpanActionPerformed
+
+    private void btnlecheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlecheActionPerformed
+        // TODO add your handling code here:
+        VentanaItemsController.btnleche();
+    }//GEN-LAST:event_btnlecheActionPerformed
+
+    private void btnchocolateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnchocolateActionPerformed
+        // TODO add your handling code here:
+        
+        VentanaItemsController.btnchocolate();
+        
+    }//GEN-LAST:event_btnchocolateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,10 +254,16 @@ public class VistaItems extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnchocolate;
     private javax.swing.JButton btnhelado;
+    private javax.swing.JButton btnleche;
+    private javax.swing.JButton btnpan;
     private javax.swing.JButton btnpastel;
     private javax.swing.JLabel fondoitems;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabelchocolate;
+    private javax.swing.JLabel jLabelleche;
+    private javax.swing.JLabel jLabelpan;
     private javax.swing.JLabel jlabelhelado;
     private javax.swing.JLabel jlabelpastel;
     private javax.swing.JTextField txttotal;

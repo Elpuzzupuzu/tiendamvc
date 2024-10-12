@@ -4,6 +4,7 @@ package Modelo;
 import Vista.VentanaTicket;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import tienda.VentanaItemsController;
 
 
 public class Carrito {
@@ -30,11 +31,12 @@ private final ArrayList<Producto> compras = new ArrayList();
       }
        for(int i=0; i<compras.size();i++){
        
-       listap+="producto"+compras.get(i).getNombre()+"\n";
-       listap+="precio"+compras.get(i).getPrecio()+"\n";
+       listap+="producto: "+compras.get(i).getNombre()+"\n";
+       listap+="precio: "+compras.get(i).getPrecio()+"\n";
        
        }//fin ciclo for de la lista
-      
+       
+      listap+="'\n"+"------------"+"\n"+"TOTAL: "+VentanaItemsController.total; //SE AÑADE EL TOTAL
       JOptionPane.showMessageDialog(null, listap);
       
     

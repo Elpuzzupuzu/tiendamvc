@@ -18,7 +18,9 @@ public class VentanaTicketController {
     vt.getjTextticket().setText("\n"+lista+"\n");
    
     
+    
     }
+    
     
     
     
